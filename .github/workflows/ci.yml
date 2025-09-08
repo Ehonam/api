@@ -30,3 +30,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file api/pom.xml
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: my-artifact
+        path: api/.github/workflows/ci.yml
